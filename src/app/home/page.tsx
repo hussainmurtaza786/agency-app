@@ -1,8 +1,11 @@
+import BestServices from "@/components/BestServices";
+import RelationShip from "@/components/RelationShip";
 import Services from "@/components/Services";
+import Team from "@/components/Team";
 
 export default function HomePage() {
     return (
-        <div>
+        <div className="flex flex-col">
             <div className="relative  ">
                 <img width='100%' src="/assest/home-bg-image.jpeg" alt="" />
                 <div className="bg-black opacity-55 text-xl absolute bottom-28 p-4 text-white text-center w-full">
@@ -19,7 +22,7 @@ export default function HomePage() {
                 <div className="flex-1 m-10 ">
                     <h1 className='font-extrabold text-lg mb-5'>The Best Agency for your Business</h1>
                     <p>Our strategy is dependent on your world and your goals. Moving towards your goal empowers us too!</p>
-                    <button className="bg-customPurple text-white mt-7 p-2 w-40 hover:border-2 border-customPurple m-1">Consult Now</button>
+                    <ConsultBtn />
                 </div>
                 <div className="flex justify-center items-center flex-col flex-1 m-10  ">
                     <svg className=" mt-4 mb-5" viewBox="60 60 910 910" width={100} focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M952 474H829.8C812.5 327.6 696.4 211.5 550 194.2V72c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v122.2C327.6 211.5 211.5 327.6 194.2 474H72c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h122.2C211.5 696.4 327.6 812.5 474 829.8V952c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V829.8C696.4 812.5 812.5 696.4 829.8 550H952c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8zM512 756c-134.8 0-244-109.2-244-244s109.2-244 244-244 244 109.2 244 244-109.2 244-244 244z"></path><path d="M512 392c-32.1 0-62.1 12.4-84.8 35.2-22.7 22.7-35.2 52.7-35.2 84.8s12.5 62.1 35.2 84.8C449.9 619.4 480 632 512 632s62.1-12.5 84.8-35.2C619.4 574.1 632 544 632 512s-12.5-62.1-35.2-84.8C574.1 404.4 544.1 392 512 392z"></path></svg>
@@ -38,7 +41,27 @@ export default function HomePage() {
                 </div>
 
             </div>
-            <Services />
+            <div>
+                <Services />
+            </div>
+            <div >
+                <BestServices />
+            </div>
+            <div>
+                <RelationShip />
+            </div>
+            <div>
+                <Team/>
+            </div>
         </div>
+    )
+}
+
+
+
+export function ConsultBtn() {
+    return (
+        <button className="bg-customPurple text-white mt-7 p-2 w-40 h-12 m-1">Consult Now</button>
+
     )
 }
