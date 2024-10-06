@@ -9,9 +9,9 @@ export default function Navbar() {
                 <div className="ml-4">
                     <img className="w-32 md:w-48" src={'/assest/logo.png'} alt="Logo" />
                 </div>
-                <ul className="hidden md:flex mt-3 mr-10 text-lg font-semibold">
-                    <li className="mr-8"><Link href=''>Home</Link></li>
-                    <li className="mr-8"><Link href=''>About us</Link></li>
+                <ul className="hidden md:flex mt-3 mr-10 text-sm font-semibold">
+                    <li className="mr-8"><Link href='/home'>Home</Link></li>
+                    <li className="mr-8"><Link href='/about'>About us</Link></li>
                     <li className="mr-8"><Link href=''>Team</Link></li>
                     <li className="mr-8"><Link href=''>Services</Link></li>
                     <li className="mr-8"><Link href=''>Process</Link></li>

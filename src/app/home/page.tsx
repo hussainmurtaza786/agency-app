@@ -1,9 +1,10 @@
-import BestServices from "@/components/BestServices";
-import Gallery from "@/components/Gallery";
-import RelationShip from "@/components/RelationShip";
-import Services from "@/components/Services";
-import Support from "@/components/Support";
-import Team from "@/components/Team";
+import BestServices from "@/components/Home-comp/BestServices";
+import Gallery from "@/components/Home-comp/Gallery";
+import RelationShip from "@/components/Home-comp/RelationShip";
+import Services from "@/components/Home-comp/Services";
+import Support from "@/components/Home-comp/Support";
+import Team from "@/components/Home-comp/Team";
+import { ReactNode } from "react";
 
 export default function HomePage() {
   return (
@@ -32,7 +33,7 @@ export default function HomePage() {
               Our strategy is dependent on your world and your goals. Moving
               towards your goal empowers us too!
             </p>
-            <ConsultBtn />
+            <Button> Consult Now</Button>
           </div>
 
           {/* Highlighted Services */}
@@ -88,15 +89,20 @@ function ServiceHighlight({ title, description }: Highlight) {
     </div>
   );
 }
-
-export function ConsultBtn() {
+type chil ={
+  children:ReactNode
+  className?: string;
+}
+export function Button({ children,className }:chil) {
   return (
+    <div className={className}>
     <div className="relative w-40 md:w-44 h-12 md:h-14 group">
       <button className="bg-customPurple text-white p-2 w-full h-full m-1 relative z-10 rounded-full">
-        Consult Now
+        {children}
       </button>
       <span className="absolute left-0 top-0 w-0 h-0.5 bg-customPurple rounded-full group-hover:w-full group-hover:h-full transition-all duration-700 ease-out"></span>
       <span className="absolute right-0 bottom-0 w-0 h-0.5 bg-customPurple rounded-full group-hover:w-full group-hover:h-full transition-all duration-700 ease-out"></span>
+    </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { ConsultBtn } from "@/app/home/page";
+import { Button } from "@/app/home/page";
 
 export default function RelationShip() {
   return (
@@ -11,7 +11,7 @@ export default function RelationShip() {
         <p className="text-base text-gray-200 mb-4">
           You don’t have to reinvent the wheels, right? When you entrust the task of launching a strategy for your latest marketing campaign, you get many time-tested modules that have delivered consistently across different industries.
         </p>
-        <ConsultBtn />
+        <Button > Consult Now</Button>
       </div>
 
       <div className="relative w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0">
